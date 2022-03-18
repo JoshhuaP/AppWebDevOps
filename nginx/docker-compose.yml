@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+   nginx:
+      image: nginx
+      ports:
+         - "80:80/tcp"
+      volumes:
+         - /home/vagrant/nginx/conf.d:/etc/nginx/conf.d:ro
+   app1:
+      image: app1
+   app2:
+      image: app2
